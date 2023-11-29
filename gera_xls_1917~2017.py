@@ -5,6 +5,8 @@ import os.path as os
 import sys
 import pandas as pan
 
+anos = range(1917,2018)
+
 #URL base do site
 url_planilhas = "http://www.leb.esalq.usp.br/exceldados/{}{}.xls"
 
@@ -12,7 +14,7 @@ url_planilhas = "http://www.leb.esalq.usp.br/exceldados/{}{}.xls"
 diretorio_de_download = os.dirname(sys.argv[0])
 
 # Loop de 1917 a 2023 e definicao dos links de download
-for ano in range(1917, 2018):
+for ano in anos:
     if ano < 2000:
         url = url_planilhas.format("ROB", str(ano)[2:])
     else:
