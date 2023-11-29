@@ -3,6 +3,7 @@
 import requests as rq
 import os.path as os
 import sys
+import pandas as pan
 
 #URL base do site
 url_planilhas = "http://www.leb.esalq.usp.br/exceldados/{}{}.xls"
@@ -34,3 +35,4 @@ for ano in range(1917, 2018):
         print(f"Nao foi possivel baixar a planilha do ano {ano}.")
 
 print("Download de planilhas concluido.")
+
