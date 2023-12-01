@@ -4,7 +4,7 @@ import requests as rq
 import os
 
 # URL base do site
-url_das_planilhas = "http://www.leb.esalq.usp.br/exceldados/{}{}{}.xls"
+url_das_planilhas = "http://www.leb.esalq.usp.br/exceldados/{}{}.xls"
 
 # Diretório onde você deseja salvar as planilhas
 diretorio_de_download = os.getcwd() + "/"
@@ -12,9 +12,9 @@ diretorio_de_download = os.getcwd() + "/"
 # Loop de 1917 a 2023
 for ano in range(1917, 2018):
     if ano < 2000:
-        url = url_das_planilhas.format("ROB", str(ano)[2:], "")
+        url = url_das_planilhas.format("ROB", str(ano)[2:])
     else:
-        url = url_das_planilhas.format("DCE", str(ano), "")
+        url = url_das_planilhas.format("DCE", str(ano))
 
     # Faça a solicitação para o servidor
     solicitacao_dos_dados = rq.get(url)
