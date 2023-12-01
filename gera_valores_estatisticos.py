@@ -5,9 +5,6 @@ import pandas as pd
 # Carregue a planilha
 df = pd.read_excel('Precipi_Total.xlsx')
 
-# Remova espaços extras nos nomes das colunas
-df.columns = df.columns.str.strip()
-
 # Solicite ao usuário o mês e ano desejados
 ano_desejado = int(input('Digite o ano desejado (1917-2017): '))
 mes_desejado = input('Digite o mês desejado (JAN-DEZ): ').upper().strip()

@@ -12,7 +12,8 @@ print('Processando Dataframes...')
 for ano in anos:
     df = pd.read_excel(f'{ano}.xls')
     df.columns = df.iloc[0]
-    df = df.loc[pd.to_numeric(df['No'], errors = 'coerce').notnull(),['No','ANO     ','DIA     ','MES     ','PRECIPI-']]
+    df.columns = df.columns.str.strip()
+    df = df.loc[pd.to_numeric(df['No'], errors = 'coerce').notnull(),['No','ANO','DIA','MES','PRECIPI-']]
     v = v._append(df)
 v.to_excel('Precipi_Total.xlsx')
 
