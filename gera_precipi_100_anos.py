@@ -16,4 +16,4 @@ for ano in anos:
     v = v._append(df)
 v.to_excel('Precipi_Total.xlsx')
 
-print('Concluido.')
+print('Concluído.')
